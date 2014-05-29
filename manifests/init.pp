@@ -18,8 +18,8 @@ class fusiondirectory (	$rootDn		= undef,
 	## Packages
 	package { "fusiondirectory": 
 		ensure => installed,
-		require => [ 	Apt::Sources_list["fusiondirectory"],
-				Apt::Key["62B4981F"],
+		require => [ 	Apt::Source["fusiondirectory"],
+				Apt::Key["fusiondirectory"],
 		],
 	}
 	package { "php-mdb2":
