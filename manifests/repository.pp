@@ -7,18 +7,18 @@ class fusiondirectory::repository {
         
         apt::source { 'fusiondirectory':
   		location          => 'http://repos.fusiondirectory.org/debian',
-  		release           => 'stable',
+  		release           => 'wheezy',
   		repos             => 'main',
 	}
 	apt::source { 'fusiondirectory_extra':
                 location          => 'http://repos.fusiondirectory.org/debian-extra',
-                release           => 'stable',
+                release           => 'wheezy',
                 repos             => 'main',
         }
 
         apt::key { "fusiondirectory":
                 key => '62B4981F',
-                key_source => "http://repos.fusiondirectory.org/gpg/fusiondirectory_public.key"
+                key_source => "https://github.com/fusiondirectory/fusiondirectory-gpg-keys/raw/master/fusiondirectory_public.key"
         }
 
 }
