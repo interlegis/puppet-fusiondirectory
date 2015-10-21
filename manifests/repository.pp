@@ -6,7 +6,7 @@ class fusiondirectory::repository {
         include apt
         
         apt::source { 'fusiondirectory':
-  		location          => 'http://repos.fusiondirectory.org/debian',
+  		location          => 'http://repos.fusiondirectory.org/debian-wheezy',
   		release           => 'wheezy',
   		repos             => 'main',
 	}
